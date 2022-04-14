@@ -18,8 +18,6 @@ mongoose
     console.log(er.message);
   });
 
-// use this on playground
-
 // use this on client
 app.use(
   cors({
@@ -27,6 +25,9 @@ app.use(
     origin: "/",
   })
 );
+app.use(express.json({ limit: `50mb` }));
+
+app.use(express.urlencoded({ extended: true, limit: "50mb" }));
 
 // front-end
 app.use("/", express.static(path.join(__dirname, "../../frontend/build")));
@@ -34,9 +35,5 @@ app.use("/", express.static(path.join(__dirname, "../../frontend/build")));
 app.get("*", (req: Request, res: Response) => {
   res.sendFile(path.join(__dirname, "../../frontend/build/index.html"));
 });
-
-app.use(express.json({ limit: `50mb` }));
-
-app.use(express.urlencoded({ extended: true, limit: "50mb" }));
 
 export default app;
