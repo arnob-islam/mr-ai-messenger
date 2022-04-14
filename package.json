@@ -6,8 +6,8 @@
   "scripts": {
     "start": "node backend/dist/server.js",
     "dev": "nodemon backend/src/server.ts",
-    "build": "tsc",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false && npm install",
+    "build": "tsc",
     "postinstall": "npm run build"
 
   },
