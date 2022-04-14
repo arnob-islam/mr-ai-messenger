@@ -29,12 +29,12 @@ app.use(
   })
 );
 
-// front-end
-app.use("/", express.static(path.join(__dirname, "../../frontend/build")));
-// front-end index file
-app.get("*", (req: Request, res: Response) => {
-  res.sendFile(path.join(__dirname, "../../frontend/build/index.html"));
-});
+// // front-end
+// app.use("/", express.static(path.join(__dirname, "../../frontend/build")));
+// // front-end index file
+// app.get("*", (req: Request, res: Response) => {
+//   res.sendFile(path.join(__dirname, "../../frontend/build/index.html"));
+// });
 
 app.use(express.json({ limit: `50mb` }));
 
