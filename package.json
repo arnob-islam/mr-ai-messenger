@@ -6,10 +6,9 @@
   "scripts": {
     "start": "node backend/dist/server.js",
     "dev": "nodemon backend/src/server.ts",
-    "tsc": "tsc",
     "build": "tsc",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false && npm install",
-    "postinstall": "npm run tsc"
+    "postinstall": "npm run build"
 
   },
   "keywords": [],

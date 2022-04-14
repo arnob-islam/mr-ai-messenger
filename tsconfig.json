@@ -98,5 +98,8 @@
     // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
     "skipLibCheck": true /* Skip type checking all .d.ts files. */
   },
-  "include": ["backend/src/**/*.ts"]
+  "include": [
+    "backend/src/**/*.ts" /* Include every ts file in source folder */
+  ],
+  "exclude": ["node_modules" /* exclude everything in  node_modules */]
 }
