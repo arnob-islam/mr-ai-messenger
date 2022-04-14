@@ -1,6 +1,7 @@
 import express, { Express } from "express";
 import cors from "cors";
-import cookiePerser from "cookie-parser";
+// import cookiePerser from "cookie-parser";
+const cookiePerser = require("cookie-parser");
 import mongoose from "mongoose";
 import path from "path";
 
