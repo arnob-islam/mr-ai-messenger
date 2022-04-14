@@ -3,7 +3,7 @@ import { createServer } from "http";
 import app from "./app";
 import Resovers from "./GraphQl/Resolver/app";
 import TypeDefs from "./GraphQl/TypeDefs/app";
-import Socket from "../src/Controllers/Socket.io";
+import Socket from "./Controllers/Socket.io";
 
 const PORT = process.env.PORT || 5000;
 
