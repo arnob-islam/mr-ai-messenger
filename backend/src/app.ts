@@ -1,7 +1,5 @@
-import express, { Express } from "express";
+import express, { Express, Request, Response } from "express";
 import cors from "cors";
-// import cookiePerser from "cookie-parser";
-const cookiePerser = require("cookie-parser");
 import mongoose from "mongoose";
 import path from "path";
 
@@ -31,15 +29,15 @@ app.use(
   })
 );
 
-// // front-end
-// app.use("/", express.static(path.join(__dirname, "../../frontend/build")));
-// // front-end index file
-// app.get("*", (req, res) => {
-//   res.sendFile(path.join(__dirname, "../../frontend/build/index.html"));
-// });
+// front-end
+app.use("/", express.static(path.join(__dirname, "../../frontend/build")));
+// front-end index file
+app.get("*", (req: Request, res: Response) => {
+  res.sendFile(path.join(__dirname, "../../frontend/build/index.html"));
+});
 
 app.use(express.json({ limit: `50mb` }));
-app.use(cookiePerser());
+
 app.use(express.urlencoded({ extended: true, limit: "50mb" }));
 
 export default app;
