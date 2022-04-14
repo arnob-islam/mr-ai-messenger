@@ -19,7 +19,6 @@ mongoose
   });
 
 // use this on playground
-app.use(cors());
 
 // use this on client
 app.use(

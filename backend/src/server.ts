@@ -20,7 +20,6 @@ const getStarted = async () => {
       app,
       // in playground make sure corse is false
       // cors: false,
-
       // in react or client, make sure corse is this
       cors: {
         origin: "/",
