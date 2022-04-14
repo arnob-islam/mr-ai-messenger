@@ -1,0 +1,144 @@
+.flex {
+  display: flex;
+}
+.fd-c {
+  flex-direction: column;
+}
+.ai-c {
+  align-items: center;
+}
+.jc-s-b {
+  justify-content: space-between;
+}
+.jc-c {
+  justify-content: center;
+}
+.message_button {
+  display: flex;
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+}
+
+// *********
+.__section_bg {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  h1 {
+    color: white;
+  }
+}
+// *********
+
+.__messenger {
+  width: 22.5rem;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transform: translateY(200vh);
+  transition: 0.4s;
+  z-index: 100;
+  height: 480px;
+  background: whitesmoke;
+  box-shadow: 0 0 8px 0px #a9a9a9;
+  border-radius: 0.5rem;
+}
+.open__messenger {
+  transform: translateY(0) !important;
+}
+
+.messenger_heading {
+  background: white;
+  padding-left: 1rem;
+  border-radius: 0.5rem;
+}
+.display_body {
+  overflow-y: hidden;
+  overflow-x: hidden;
+  flex-grow: 1;
+  position: relative;
+  flex-direction: column !important;
+}
+.messenger_wrapper {
+  height: 100%;
+}
+.write_message {
+  padding: 0.5rem;
+  border-top: 1px solid #e3e3e3;
+}
+.messenger_play_ground {
+  contain: paint;
+  overscroll-behavior: contain;
+  overflow-y: auto;
+  padding: 0.7rem 0.5rem;
+}
+
+.ai__list__box {
+  border-top: 1px solid #e3e3e3;
+  button {
+    text-transform: initial !important;
+    background: #e5e5e5;
+    border-radius: 5.5rem;
+    min-height: initial !important;
+    padding: 8px 16px;
+  }
+  .ai__tabs {
+    min-height: initial !important;
+  }
+}
+
+.message_single_txt {
+  max-width: 220px;
+  background: linear-gradient(45deg, #8f4ae9, #540dff);
+  margin-bottom: 0.5rem;
+  border-radius: 1rem;
+  padding: 0.2rem 0.66rem;
+  span {
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    border-radius: 1rem;
+    font-size: 0.89rem;
+    letter-spacing: 0.3px;
+    color: white;
+    a {
+      text-decoration: underline;
+      color: whiteSmoke;
+    }
+  }
+}
+
+.m__left {
+  margin-right: auto;
+}
+.m__right {
+  margin-left: auto;
+}
+
+// ***************** admin ********
+
+.bannder_wrapper {
+  background: whitesmoke;
+  border-radius: 1rem;
+  box-shadow: 0 0 5px #c3c3c3;
+  text-transform: uppercase;
+  .bannder_user_count {
+    h1 {
+      font-size: 2.2rem;
+      margin: 0;
+    }
+  }
+}
+
+.user_inbox_list_ul {
+  .user_inbox_li {
+    padding: 0 1.5rem;
+    border-radius: 1rem;
+    transition: 0.45s;
+    &:hover {
+      box-shadow: 0 0 5px #dedede;
+    }
+  }
+}
