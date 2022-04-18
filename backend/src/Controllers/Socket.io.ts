@@ -1,6 +1,6 @@
 const socket = require("socket.io");
 import { I_SocketUser } from "../utils/Interfaces";
-import { EachUserAi } from "../utils/AiHelper";
+import { EachUserAi, ErrorHandaler } from "../utils/AiHelper";
 import Messenger from "../Models/Messenger";
 
 let Users: I_SocketUser[] = [];
@@ -222,7 +222,8 @@ const AdminTakeCare = (socket: any, io: any) => {
         }
       });
     } catch (error: any) {
-      throw new Error(error.messages);
+      console.log(error);
+      ErrorHandaler();
     }
   });
 };
@@ -259,7 +260,9 @@ const addMessageToDb = async (id: string, text?: string, answer?: string) => {
       messages: newCreated.messages[newCreated.messages.length - 1],
     };
   } catch (error: any) {
-    throw new Error(error.message);
+    console.log(error);
+    ErrorHandaler();
+    throw new Error(error.messages);
   }
 };
 
@@ -286,7 +289,8 @@ const UserInitial = async (socket: any, io: any, id: string) => {
         id,
       });
   } catch (error: any) {
-    throw new Error(error.messages);
+    console.log(error);
+    ErrorHandaler();
   }
 };
 

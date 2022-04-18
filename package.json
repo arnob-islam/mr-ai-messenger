@@ -4,7 +4,7 @@
   "description": "",
   "main": "backend/dist/server",
   "scripts": {
-    "start": "node backend/dist/server.js",
+    "start": "pm2 start backend/dist/server.js",
     "dev": "nodemon backend/src/server.ts",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false && npm install --prefix frontend && npm run build --prefix frontend",
     "build": "tsc",
@@ -30,6 +30,7 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.2.9",
     "nodemailer": "^6.7.3",
+    "pm2": "^5.2.0",
     "socket.io": "^4.4.1",
     "typescript": "^4.6.3",
     "uuid": "^8.3.2"

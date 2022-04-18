@@ -2,6 +2,7 @@ import express, { Express, Request, Response } from "express";
 import cors from "cors";
 import mongoose from "mongoose";
 import path from "path";
+import { ErrorHandaler } from "./utils/AiHelper";
 
 const app: Express = express();
 
@@ -16,6 +17,7 @@ mongoose
   })
   .catch((er: any) => {
     console.log(er.message);
+    ErrorHandaler();
   });
 
 // use this on client

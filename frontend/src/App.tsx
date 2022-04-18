@@ -6,7 +6,7 @@ import Dashbord from "./Components/Admin";
 import { io } from "socket.io-client";
 import Landing from "./Components/Pages/Section";
 
-const socket: any = io("/");
+const socket: any = io("http://localhost:5000/");
 
 const App = () => {
   React.useEffect(() => {

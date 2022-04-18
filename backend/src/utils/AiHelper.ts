@@ -1,4 +1,18 @@
 import { I_AI_Values } from "./Interfaces";
+import process from "process";
+
+const ErrorHandaler = () => {
+  process.on("unhandledRejection", (err: any) => {
+    console.log(err.message);
+    process.exit(1);
+  });
+
+  process.on("uncaughtException", (err: any) => {
+    console.log(err.message);
+    process.exit(1);
+  });
+  return;
+};
 
 let EachUserAi: I_AI_Values[] = [
   {
@@ -23,4 +37,4 @@ let EachUserAi: I_AI_Values[] = [
   },
 ];
 
-export { EachUserAi };
+export { EachUserAi, ErrorHandaler };

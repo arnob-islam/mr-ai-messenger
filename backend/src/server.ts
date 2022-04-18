@@ -4,6 +4,7 @@ import app from "./app";
 import Resovers from "./GraphQl/Resolver/app";
 import TypeDefs from "./GraphQl/TypeDefs/app";
 import Socket from "./Controllers/Socket.io";
+import { ErrorHandaler } from "./utils/AiHelper";
 
 const PORT = process.env.PORT || 5000;
 
@@ -32,6 +33,7 @@ const getStarted = async () => {
 
     Socket(socketServer);
   } catch (error: any) {
+    ErrorHandaler();
     throw new Error(error.message);
   }
 };
