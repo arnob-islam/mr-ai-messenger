@@ -1,10 +1,9 @@
 import React from "react";
-import Messenger from "./Components/Messenger";
 import Navbar from "./Components/Pages/Navbar";
 import { Outlet, Route, Routes } from "react-router-dom";
 import Dashbord from "./Components/Admin";
 import { io } from "socket.io-client";
-import Landing from "./Components/Pages/Section";
+import Landing from "./Components/Pages";
 
 const socket: any = io("http://localhost:5000/");
 
@@ -38,8 +37,7 @@ function Layout() {
 const Home = () => {
   return (
     <>
-      <Landing />
-      <Messenger socket={socket} />
+      <Landing socket={socket} />
     </>
   );
 };
